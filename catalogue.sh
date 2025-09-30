@@ -68,7 +68,7 @@ VALIDATE $? "starting catalogue"
 
 cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo
 dnf install mongodb-mongosh -y & >>$LOG_FILE
-VALIDATING $? "Installing MongoDB Client"
+VALIDATE $? "Installing MongoDB Client"
 
 mongosh --host mongodb.devopsdaws.store </app/db/master-data.js & >>$LOG_FILE
 VALIDATE $? "Loading data into MongoDB"
